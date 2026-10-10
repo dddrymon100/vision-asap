@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vision ASAP | Seed Company</title>
+<meta name="description" content="All Scripture, All People. Learn about Vision ASAP, our Phase 1 goals, and how we work with partners around the world.">
+<!-- DRAFT: remove the next line when the page is approved and ready to be found in search. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Montserrat:wght@400;600&family=Red+Hat+Mono:wght@300;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --natural:#F7F1E7; --stone:#CDC3B0; --white:#FFFFFF; --light:#EBEBEC; --gray:#636466; --black:#323232;
+  --body:'Gotham','Montserrat',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --serif:'Sentinel','EB Garamond',Georgia,'Times New Roman',serif;
+  --mono:'Red Hat Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--natural);color:var(--black);font:400 1.0625rem/1.65 var(--body)}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
+@media (min-width:48em){.wrap{padding:0 3rem}}
+.measure{max-width:40rem}
+p{margin:.75rem 0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--black);outline-offset:3px;box-shadow:0 0 0 6px var(--white)}
+.band :focus-visible{outline-color:var(--natural);box-shadow:0 0 0 6px var(--black)}
+.skip{position:absolute;left:-999px;top:0;background:var(--black);color:var(--natural);padding:.75rem 1rem;z-index:10}
+.skip:focus{left:0}
+
+/* Buttons and links */
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.7rem 1.5rem;border-radius:4px;border:2px solid var(--black);
+  background:var(--black);color:var(--natural);font:600 1rem var(--body);text-decoration:none}
+.btn:hover{background:var(--gray);border-color:var(--gray)}
+.btn.small{min-height:44px;padding:.5rem 1.1rem;font-size:.9375rem}
+.btn.light{background:var(--natural);color:var(--black);border-color:var(--natural)}
+.btn.light:hover{background:var(--white);border-color:var(--white)}
+.textlink{font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.3em}
+.textlink:hover{text-decoration-thickness:2px}
+
+/* Header */
+.site{border-bottom:1px solid var(--stone)}
+.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:1.1rem;padding-bottom:1.1rem}
+.logo{width:240px;height:auto}
+@media (max-width:30em){.logo{width:180px}}
+
+/* Hero */
+.hero{padding:3.5rem 0 4rem}
+.label{font:300 .9375rem/1.4 var(--mono);color:var(--gray);margin:0 0 1.25rem;letter-spacing:.02em}
+h1{font:400 clamp(2.9rem,10vw,6.4rem)/1.02 var(--serif);letter-spacing:-.012em;margin:0;text-wrap:balance}
+.cta{display:flex;flex-wrap:wrap;gap:1.25rem 2rem;align-items:center;margin:2.25rem 0 0}
+.cta-note{margin:1rem 0 0;font-size:.9375rem;color:var(--gray)}
+.statements{display:grid;gap:0;margin-top:3.5rem;border-top:1px solid var(--stone)}
+.statement{padding:1.5rem 0;border-bottom:1px solid var(--stone)}
+.statement p.say{font:400 clamp(1.4rem,3.4vw,2rem)/1.3 var(--serif);margin:.4rem 0 0;max-width:30em}
+@media (min-width:56em){
+  .statements{grid-template-columns:1fr 1fr;gap:0 3rem}
+  .statement{border-bottom:0;padding:1.75rem 0 0}
+}
+
+/* Sections */
+.section{padding:3.5rem 0;border-top:1px solid var(--stone)}
+@media (min-width:56em){
+  .section{padding:5rem 0}
+  .split{display:grid;grid-template-columns:1fr 2fr;gap:3rem}
+}
+h2{font:600 1.35rem/1.3 var(--body);margin:0 0 1.5rem}
+h3{font:600 1.0625rem/1.4 var(--body);margin:0 0 .4rem}
+.lead{font-size:1.2rem;line-height:1.55}
+.pull{font:400 clamp(1.35rem,3vw,1.8rem)/1.4 var(--serif);border-left:4px solid var(--black);padding-left:1.4rem;margin:2rem 0;max-width:34em}
+.two{display:grid;gap:1.75rem;margin:2rem 0}
+.two > div{border-top:3px solid var(--black);padding-top:1rem}
+@media (min-width:48em){.two{grid-template-columns:1fr 1fr;gap:2.5rem}}
+.closing{font:400 clamp(1.25rem,2.6vw,1.6rem)/1.4 var(--serif);margin-top:2rem;max-width:30em}
+
+/* Numbers ledger */
+.ledger{list-style:none;margin:1.5rem 0 0;padding:0}
+.ledger li{display:grid;gap:.1rem;padding:1.15rem 0;border-top:1px solid var(--stone)}
+.ledger li:last-child{border-bottom:1px solid var(--stone)}
+.num{font:300 clamp(2.4rem,8vw,3.6rem)/1 var(--mono);letter-spacing:-.03em;margin:0}
+.unit{font-size:.36em;letter-spacing:0;margin-left:.45em;color:var(--gray)}
+.unit.pct{margin-left:0;font-size:.62em;color:inherit}
+.what{margin:0;max-width:30em}
+@media (min-width:40em){
+  .ledger li{grid-template-columns:15rem 1fr;gap:2rem;align-items:baseline}
+}
+
+
+/* Strategy infographic */
+.info{margin-top:2.5rem}
+.prongs{display:grid;gap:1.5rem}
+@media (min-width:48em){.prongs{grid-template-columns:1fr 1fr;gap:2rem}}
+.prong{background:var(--white);border:1px solid var(--stone);border-radius:6px;overflow:hidden}
+.prong-head{padding:1.4rem 1.5rem;background:var(--black);color:var(--natural)}
+.prong.alt .prong-head{background:var(--stone);color:var(--black)}
+.prong-head h3{font:600 1.35rem/1.3 var(--body);margin:0}
+.prong-head p{margin:.4rem 0 0;font-size:.9375rem}
+.aims{list-style:none;margin:0;padding:0}
+.aims li{display:grid;grid-template-columns:2.25rem 1fr;gap:.5rem;padding:.95rem 1.5rem;border-top:1px solid var(--stone)}
+.aims li:first-child{border-top:0}
+.aims .n{font:300 1rem/1.5 var(--mono);color:var(--gray)}
+.aims b{display:block;font-weight:600;line-height:1.4}
+.aims .d{display:block;font-size:.9375rem;line-height:1.5;color:var(--gray)}
+.join{display:none}
+.stem{display:block;width:2px;height:2.25rem;background:var(--black);margin:0 auto}
+@media (min-width:48em){
+  .join{display:block;width:100%;height:4.5rem}
+  .join path{stroke:var(--black);stroke-width:2;fill:none;vector-effect:non-scaling-stroke}
+  .stem{display:none}
+}
+.outcome{background:var(--white);border:3px solid var(--black);border-radius:6px;padding:1.75rem 1.5rem;text-align:center}
+@media (min-width:48em){.outcome{padding:2.25rem 3rem}}
+.outcome .label{margin:0 0 .75rem}
+.outcome .say{font:400 clamp(1.4rem,3.2vw,2rem)/1.3 var(--serif);margin:0 auto;max-width:28em}
+.more{margin-top:2.5rem}
+.more summary{display:inline-flex;align-items:center;min-height:44px;cursor:pointer;font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.3em}
+.more[open] summary{margin-bottom:1rem}
+
+/* Approach lists */
+.group + .group{margin-top:2.75rem}
+.items{list-style:none;margin:1rem 0 0;padding:0}
+.items li{padding:.9rem 0;border-top:1px solid var(--stone)}
+.items li:last-child{border-bottom:1px solid var(--stone)}
+.items strong{display:block}
+
+/* Academy band */
+.band{background:var(--black);color:var(--natural);padding:4rem 0}
+.band h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1rem}
+.band p{max-width:34em;margin-bottom:2rem}
+.band .band-note{margin:1rem 0 0;font-size:.9375rem}
+
+/* Footer */
+.foot .wrap{display:flex;align-items:center;gap:1rem;padding-top:2rem;padding-bottom:2.5rem;color:var(--gray);font-size:.9rem}
+.mark{width:44px;height:auto}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap">
+    <img class="logo" src="data:image/png;base64,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" alt="Seed Company" width="240" height="18">
+    <!-- Academy link: update the address in the three Academy buttons if it changes. -->
+    <a class="btn small" href="https://app.teachfloor.com/seed-company/courses">Academy</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="label">Vision ASAP</p>
+    <h1>All Scripture, All People</h1>
+    <div class="cta">
+      <a class="btn" href="https://app.teachfloor.com/seed-company/courses">Go to the Academy</a>
+      <a class="textlink" href="#numbers">See the Phase 1 goals</a>
+    </div>
+    <p class="cta-note">Partners sign in or create an account to get started.</p>
+
+    <div class="statements">
+      <div class="statement">
+        <p class="label">Vision</p>
+        <p class="say">God’s Word transforming lives in every language in this generation.</p>
+      </div>
+      <div class="statement">
+        <p class="label">Mission</p>
+        <p class="say">To accelerate Scripture translation and impact for people without God’s Word through Great Commission Partnerships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="success">
+  <div class="wrap split">
+    <h2>Translation and use go together</h2>
+    <div>
+      <p class="lead measure">ASAP includes languages, and the products translated into those languages. But ASAP is also more than that. Success means all Scripture is translated, accessible, and engaged by all people.</p>
+
+      <p class="pull">Local leaders who want to disciple their communities, but do not have enough Scripture in their heart language, are like builders without the materials they need. A completed translation, without local leaders prepared to make it accessible, is like a well from which no one draws water.</p>
+
+      <p class="measure">Neither reality alone fulfills the vision. So ASAP holds two realities together as one end state.</p>
+
+      <div class="two">
+        <div>
+          <h3>All Scripture for all people</h3>
+          <p>People in every language community have access to the Scripture they need for discipleship. That means a full Bible, or an agreed-upon, sufficient set of Scripture.</p>
+        </div>
+        <div>
+          <h3>Local leaders equipped to lead translation and ensure lasting access</h3>
+          <p>Local leaders and institutions have the authority, skills, systems, and resources to lead translation to completion, ensure its quality, and make the completed Scripture accessible to their communities.</p>
+        </div>
+      </div>
+
+      <p class="closing">When both are true, Scripture does not simply arrive in a language. It becomes part of the life of the community.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="numbers">
+  <div class="wrap split">
+    <div>
+      <h2>Phase 1 by the numbers</h2>
+      <p class="measure">Phase 1 runs for four years, from 2027 to 2030.</p>
+    </div>
+    <ul class="ledger">
+      <li><p class="num">$140<span class="unit">million</span></p><p class="what">above and beyond the existing annual budget</p></li>
+      <li><p class="num">860</p><p class="what">languages engaged with ASAP need</p></li>
+      <li><p class="num">420</p><p class="what">Global Translation Leaders equipped</p></li>
+      <li><p class="num">90<span class="unit pct">%</span></p><p class="what">of translation projects using AI-assisted translation tools and methods</p></li>
+      <li><p class="num">95</p><p class="what">full Bibles published</p></li>
+      <li><p class="num">15<span class="unit">years</span></p><p class="what">full Bible pace, on pace to a seven-year full Bible by 2035</p></li>
+      <li><p class="num">30<span class="unit">years</span></p><p class="what">removed from the movement timeline, from 2110 to 2080</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="approach">
+  <div class="wrap">
+    <h2>Our two-pronged strategy</h2>
+    <p class="lead measure">Seed Company works in two ways to help ASAP succeed: by shaping the global environment, and by working with national and local partners in each country and region.</p>
+
+    <div class="info">
+      <div class="prongs">
+        <div class="prong">
+          <div class="prong-head"><h3>Globally</h3><p>Shape the global environment for ASAP</p></div>
+          <ul class="aims">
+            <li><span class="n" aria-hidden="true">01</span><div><b>Localize quality assurance</b><span class="d">Quality assurance rooted in each local context</span></div></li>
+            <li><span class="n" aria-hidden="true">02</span><div><b>Encourage local agency</b><span class="d">Strategy, management, and resourcing rooted locally</span></div></li>
+            <li><span class="n" aria-hidden="true">03</span><div><b>Accelerate AI adoption in Bible translation</b><span class="d">A global catalyst for AI in translation</span></div></li>
+            <li><span class="n" aria-hidden="true">04</span><div><b>Promote AI for organizational effectiveness</b><span class="d">Sharing fruitful practices across the movement</span></div></li>
+            <li><span class="n" aria-hidden="true">05</span><div><b>Catalyze engagement and impact</b><span class="d">Lasting Scripture access and engagement</span></div></li>
+          </ul>
+        </div>
+        <div class="prong alt">
+          <div class="prong-head"><h3>In each country and region</h3><p>A plan built with national and local partners</p></div>
+          <ul class="aims">
+            <li><span class="n" aria-hidden="true">01</span><div><b>All Scripture</b><span class="d">Define the Scripture each community needs</span></div></li>
+            <li><span class="n" aria-hidden="true">02</span><div><b>Pace</b><span class="d">Predictable milestones at agreed quality</span></div></li>
+            <li><span class="n" aria-hidden="true">03</span><div><b>Quality assurance</b><span class="d">Trusted quality that fits the context</span></div></li>
+            <li><span class="n" aria-hidden="true">04</span><div><b>Operations</b><span class="d">Many projects, reliable data, steady learning</span></div></li>
+            <li><span class="n" aria-hidden="true">05</span><div><b>Resourcing</b><span class="d">Lasting support, with stewardship moving local</span></div></li>
+            <li><span class="n" aria-hidden="true">06</span><div><b>Talent pipeline</b><span class="d">People ready for key roles</span></div></li>
+          </ul>
+        </div>
+      </div>
+
+      <svg class="join" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M25 0 V12 L50 30 M75 0 V12 L50 30 V40"/></svg>
+      <span class="stem" aria-hidden="true"></span>
+
+      <div class="outcome">
+        <p class="label">Together, they lead to</p>
+        <p class="say">Scripture translated, accessible, and engaged by all people, with local leaders equipped to sustain it.</p>
+      </div>
+    </div>
+
+    <details class="more">
+      <summary>Read the full descriptions</summary>
+      <div class="measure">
+        <div class="group">
+        <h3>Globally</h3>
+        <p class="measure">Seed Company is a global ministry. To help shape the global environment for ASAP, we aim to:</p>
+        <ul class="items measure">
+          <li><strong>Localize quality assurance</strong>See translation quality assurance responsibility and expertise rooted in each local context.</li>
+          <li><strong>Encourage local agency</strong>See translation strategy, management, and resourcing rooted in each local context.</li>
+          <li><strong>Accelerate AI adoption in Bible translation</strong>Be a global catalyst for exploring, implementing, and training in AI for translation across the movement.</li>
+          <li><strong>Promote AI for organizational effectiveness</strong>Pursue effectiveness through AI integration and automation, and share fruitful practices across the movement.</li>
+          <li><strong>Catalyze engagement and impact</strong>Identify fruitful practices for translation that promote Scripture access and engagement by the local Christian community, for lasting impact.</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <h3>In each country and region</h3>
+        <p class="measure">Needs differ from place to place, and so do the Bible translation assets already there. So we work with national and local partners to create a plan for each country or region. The aim is an environment where leaders and institutions can:</p>
+        <ul class="items measure">
+          <li><strong>All Scripture</strong>Define all the Scripture needed in the languages where, if all people had access to it, they would fully engage.</li>
+          <li><strong>Pace</strong>Deliver translation milestones predictably, to complete the first Scripture translation by the planned date while meeting agreed quality standards.</li>
+          <li><strong>Quality assurance</strong>Sustain trusted translation quality that fits the context, with clear review methods and community feedback built into revision.</li>
+          <li><strong>Operations</strong>Run many translation efforts at once, with clear agency, timely and reliable data, and steady learning and adjusting.</li>
+          <li><strong>Resourcing</strong>Secure varied, lasting support, with decisions and long-term stewardship moving increasingly to local and national leaders.</li>
+          <li><strong>Talent pipeline</strong>Keep a steady pipeline of people ready for key roles in translation, access and engagement, and discipleship.</li>
+        </ul>
+      </div>
+      </div>
+    </details>
+
+    <p class="closing">This takes a thriving environment, rooted in the convictions, aspirations, and commitment of national and local leaders and institutions. Within it, they grow in agency over the vision, quality, operations, and resourcing that keep translation, access, and engagement alive long after Seed Company’s involvement.</p>
+  </div>
+</section>
+
+<section class="band" id="academy">
+  <div class="wrap">
+    <h2>Learn and connect in the Academy</h2>
+    <p>The Academy is our space for training and community for partners working toward Vision ASAP. Come learn alongside us.</p>
+    <a class="btn light" href="https://app.teachfloor.com/seed-company/courses">Go to the Academy</a>
+    <p class="band-note">Partners sign in or create an account to get started.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img class="mark" src="data:image/png;base64,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" alt="" width="44" height="25">
+    <span>Seed Company. All Scripture, All People.</span>
+  </div>
+</footer>
+
+</body>
+</html>
